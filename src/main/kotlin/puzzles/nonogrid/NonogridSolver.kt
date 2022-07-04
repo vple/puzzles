@@ -23,7 +23,14 @@ class NonogridSolver {
         }
 
         fun solve(state: NonogridState): NonogridState {
-            return state
+            var currentState = state
+            while (true) {
+                val nextState = step(currentState)
+                if (nextState == currentState) {
+                    return currentState
+                }
+                currentState = nextState
+            }
         }
     }
 }
