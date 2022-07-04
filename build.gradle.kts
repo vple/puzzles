@@ -14,6 +14,8 @@ repositories {
 }
 
 dependencies {
+    implementation("it.skrape:skrapeit:1.1.5")
+
     testImplementation(kotlin("test"))
 }
 
